@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class GetBuckets {
     /*
   * Group files of similar size into buckets.
@@ -80,6 +79,8 @@ public class GetBuckets {
         for (Pair<T, Long> pair: sortedFiles)
         {
             long size = pair.right;
+
+            System.out.println(pair.left);
 
             // look for a bucket containing similar-sized files:
             // group in the same bucket if it's w/in 50% of the average for this bucket,
